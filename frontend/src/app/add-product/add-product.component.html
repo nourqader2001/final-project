@@ -1,0 +1,52 @@
+<div class="form-container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+
+      <label style="color: green;" class="myValid-2">{{ message }}</label>
+      <label style="color: red;" class="myValid-2">{{ message2 }}</label>
+      
+      <div class="mb-3">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" formControlName="name">
+        <div *ngIf="myValid['name'].touched && myValid['name'].invalid" style="color: red;">
+          <div *ngIf="myValid['name'].errors?.['required']">Name is required</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" class="form-control" formControlName="description"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" class="form-control" formControlName="price">
+        <div *ngIf="myValid['price'].touched && myValid['price'].invalid" style="color: red;">
+          <div *ngIf="myValid['price'].errors?.['required']">Price is required</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="calories">Calories:</label>
+        <input type="text" id="calories" name="calories" class="form-control" formControlName="calories">
+      </div>
+
+      <div class="mb-3">
+        <label for="category">Category:</label>
+        <select id="category" name="category" class="form-control" formControlName="category">
+          <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+        </select>
+        <div *ngIf="myValid['category'].touched && myValid['category'].invalid" style="color: red;">
+          <div *ngIf="myValid['category'].errors?.['required']">Category is required</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" class="form-control" (change)="onFileSelected($event)">
+      </div>
+
+    </div>
+    <button type="submit" class="btn btn-success">Add Product</button>
+  </form>
+</div>

@@ -1,0 +1,122 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+  
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav">
+        <a class="nav-link navlogo text-center" href="/">
+          <img src="https://www.karimdavid.com/wp-content/uploads/2023/05/DP-1-2.jpg" alt="Logo">
+        </a>
+        <li class="nav-item">
+          <a class="nav-link sidefrst" routerLink="/">
+            <span class="textside">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link sidesecnd" routerLink="/add-category">
+            <span class="textside">Add Category</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link sidesthrd" routerLink="/add-product">
+            <span class="textside">Add Product</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link sidesforth" routerLink="/add_advice">
+            <span class="textside">Add Advice</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link sidesfifth" routerLink="/add_exercise">
+            <span class="textside">Add Exercise</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav2 ml-auto">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" (click)="logout()">Logout</a>
+          <!-- <ul class="dropdown-menu">
+            <li class="resflset"><a href="/profile"><i class="fa fa-fw fa-cog"></i> Edit profile</a></li>
+            <li class="divider"></li>
+            <li class="resflset" (click)="logout()"><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+          </ul> -->
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+          <div class="inforide">
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+                <a routerLink="/get-categories"><img src="https://evolutioneat.com/wp-content/uploads/2017/07/01-Heres-Why-Your-Next-Crash-Diet-Is-Doomed-to-Fail-According-to-Science-shutterstock_544589101-1024x683-1024x675.jpg" alt="Categories"></a>
+              </div>
+              <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                <h4>Categories</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+            <div class="inforide">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+                    <a href="/get-products"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeucgkVuclqrzMy6WMX_l-Q9MS__anY4NVr5hfBLYyoHK8ujIuL1yBmG6SY4XkPrXsiHw&usqp=CAU"></a>
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                    <h4>Product</h4>
+                    <!-- <h2>120</h2> -->
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+          <div class="inforide">
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+                  <a href="/get_advices"><img src="https://img.freepik.com/premium-photo/diet-health-food-lifestyle-health-concept-sport-exercise-equipment-workout-with-green-apple-measuring-tap_35007-267.jpg"></a>
+              </div>
+              <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                  <h4>Advices</h4>
+                  <!-- <h2>120</h2> -->
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+        
+        <div class="col-lg-12 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+          <div class="inforide">
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+                  <a href="/get_exercises"><img src="https://miro.medium.com/v2/resize:fit:1358/0*Fend2s9DrgoB94aZ"></a>
+              </div>
+              <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                  <h4>Exercises</h4>
+                  <!-- <h2>120</h2> -->
+              </div>
+            </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+</body>

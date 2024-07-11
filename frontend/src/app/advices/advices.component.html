@@ -1,0 +1,23 @@
+<img src="assets/Healthy Lifestyle Tips.jpg" class="image">
+<hr>
+<div *ngFor="let tip of tips; let i = index" class="card mb-3">
+    <div class="row no-gutters">
+      <div [class.order-md-1]="i % 2 !== 0" class="col-md-3">
+        <img [src]="'http://localhost/final_project/backend/storage/app/public/' +tip.image" class="card-img" alt="Card image">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ tip.title }}</h5>
+          <h6 class="card-text">
+            <ul class="card-body-text"> <!-- Changed to <ul> -->
+              <li *ngFor="let paragraph of tip.body.split('\n')">{{ paragraph }}</li> <!-- Splitting body into list items -->
+          </ul>
+            <ul>
+              <li *ngFor="let t of tip.tips">{{ t }}</li>
+            </ul>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  

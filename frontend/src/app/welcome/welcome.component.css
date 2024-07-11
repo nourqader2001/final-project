@@ -1,0 +1,89 @@
+.home-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .parallax {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/028/193/757/non_2x/healthy-lifestyle-illustration-with-organic-vegetables-or-fruit-sport-and-workout-in-flat-cartoon-hand-drawn-background-design-templates-vector.jpg');
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: move 20s linear infinite;
+  }
+  
+  @keyframes move {
+    from {
+      transform: scale(1) translateY(0);
+    }
+    to {
+      transform: scale(1.1) translateY(-7%);
+    }
+  }
+
+  
+  /* @keyframes move {
+    from {
+      transform: scale(1) translateX(0);
+    }
+    to {
+      transform: scale(1.1) translateX(-10%);
+    }
+  } */
+
+  .overlay {
+    z-index: 1;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: rgba(0, 128, 0, 0.657);
+  }
+  
+  h2{
+    color: rgba(0, 0, 0, 0.352);
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .custom-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px; /* Added border-radius */
+    margin-top: 1rem; /* Moved margin-top to the button itself */
+  }
+  
+  .custom-button:hover {
+    background-color: darkgreen;
+  }
+  
+  button {
+    margin-top: 1rem;
+    
+  }
+  

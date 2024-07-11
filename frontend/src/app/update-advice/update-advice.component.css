@@ -1,0 +1,50 @@
+.form-container {
+    background: url('https://tofubud.com/cdn/shop/articles/Wellness_Tips_for_a_Healthy_Lifestyle_1024x.jpg?v=1608189241') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 75%;
+    height: 800px;
+    margin: 50px auto;
+    /* position: relative; */
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    /* position: relative;
+    top: -50px; */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.btn-clear {
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-clear:hover {
+    background-color: darkred;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}

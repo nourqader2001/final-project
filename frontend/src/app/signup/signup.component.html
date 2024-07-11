@@ -1,0 +1,56 @@
+<!-- src/app/signup/signup.component.html -->
+<div class="container">
+  <div class="left">
+    <img src="https://media.istockphoto.com/id/1208604845/vector/healthy-lifestyle-and-self-care-concept.jpg?s=612x612&w=0&k=20&c=4RXl4xGUFpQWHf_LVBRngZRsikqw8BOc51poaItPxMU=" alt="Healthy food">
+    <h1>We at Healthy Life</h1>
+    <p>are always fully focused on helping you achieve your wellness goals.</p>
+  </div>
+  <div class="right">
+    <div class="form-container">
+      <div class="divider"><span>Welcome to The World of Health</span></div>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <input type="text" placeholder="Full Name" formControlName="name" class="form-control" [ngClass]="{'is-invalid': myValid['name'].touched && myValid['name'].invalid}">
+          <div *ngIf="myValid['name'].touched && myValid['name'].invalid" class="invalid-feedback">
+            <div *ngIf="myValid['name'].errors?.['required']">Full Name is required.</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="email" placeholder="Email" formControlName="email" class="form-control" [ngClass]="{'is-invalid': myValid['email'].touched && myValid['email'].invalid}">
+          <div *ngIf="myValid['email'].touched && myValid['email'].invalid" class="invalid-feedback">
+            <div *ngIf="myValid['email'].errors?.['required']">Email is required.</div>
+            <div *ngIf="myValid['email'].errors?.['email']">Invalid email format.</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="password" placeholder="Password" formControlName="password" class="form-control" [ngClass]="{'is-invalid': myValid['password'].touched && myValid['password'].invalid}">
+          <div *ngIf="myValid['password'].touched && myValid['password'].invalid" class="invalid-feedback">
+            <div *ngIf="myValid['password'].errors?.['required']">Password is required.</div>
+            <div *ngIf="myValid['password'].errors?.['minlength']">Password must be at least 6 characters long.</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" class="form-control" [ngClass]="{'is-invalid': myValid['confirmPassword'].touched && myValid['confirmPassword'].invalid}">
+          <div *ngIf="myValid['confirmPassword'].touched && myValid['confirmPassword'].invalid" class="invalid-feedback">
+            <div *ngIf="myValid['confirmPassword'].errors?.['required']">Confirm Password is required.</div>
+            <div *ngIf="signupForm.errors?.['mismatch']">Passwords do not match.</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="number" placeholder="Weight" formControlName="weight" class="form-control" [ngClass]="{'is-invalid': myValid['weight'].touched && myValid['weight'].invalid}">
+          <div *ngIf="myValid['weight'].touched && myValid['weight'].invalid" class="invalid-feedback">
+            <div *ngIf="myValid['weight'].errors?.['required']">Weight is required.</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="tel" placeholder="Phone" formControlName="phone" class="form-control" [ngClass]="{'is-invalid': myValid['phone'].touched && myValid['phone'].invalid}">
+          <div *ngIf="myValid['phone'].touched && myValid['phone'].invalid" class="invalid-feedback">
+            <div *ngIf="myValid['phone'].errors?.['required']">Phone is required.</div>
+          </div>
+        </div>
+        <button class="btn-submit" type="submit">Create Account</button>
+      </form>
+      <p>Already have an account? <a href="#">Log in</a></p>
+    </div>
+  </div>
+</div>

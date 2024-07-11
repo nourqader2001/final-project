@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Calories</th>
+              <th>Price</th>
+              <!-- <th>Category</th> -->
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let product of products">
+              <td data-label="ID">{{ product.id }}</td>
+              <td data-label="Image"><img [src]="'http://localhost/final_project/backend/storage/app/public/' + product.image" alt="{{ product.name }}" class="product-image"></td>
+              <td data-label="Name">{{ product.name }}</td>
+              <td data-label="Description">{{ product.description }}</td>
+              <td data-label="Calories">{{ product.calories }}</td>
+              <td data-label="Price">{{ product.price | currency }}</td>
+              <!-- <td data-label="Category">{{ product.categoryName }}</td> -->
+              <td data-label="Actions">
+                  <button type="button" class="btn btn-sm btn-primary" (click)="updateProduct(product.id)">Update</button>
+                  <button type="button" class="btn btn-sm btn-danger ml-2" (click)="deleteProduct(product.id)">Delete</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>

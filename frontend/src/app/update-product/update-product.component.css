@@ -1,0 +1,31 @@
+.form-container {
+    background: url('https://www.health.com/thmb/R-CNdmVOYboxUHHOo5FWaHXC_XI=/2121x0/filters:no_upscale():max_bytes(150000):strip_icc()/HighProteinVegetables-9e666d0561444246a5ce27a373ec4991.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 75%;
+    height: 800px;
+    margin: 50px auto;
+  }
+  
+  form {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  .btn {
+    width: 100%;
+  }

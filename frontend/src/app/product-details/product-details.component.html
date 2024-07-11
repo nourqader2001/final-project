@@ -1,0 +1,26 @@
+<div *ngIf="isLoading" class="loading-container">Loading...</div>
+
+<div *ngIf="product">
+  <div class="card mb-3 product-card">
+    <div class="row g-0">
+      <div class="col-md-6 product-image-container">
+        <img [src]="'http://localhost/final_project/backend/storage/app/public/' + product?.image" class="img-fluid rounded-start product-image" [alt]="product?.name">
+        <button mat-icon-button class="add-to-cart-button" (click)="addToCart(product.id)">
+          <i class="fa-solid fa-cart-arrow-down"></i> Add to cart
+        </button>
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h5 class="card-title">{{ product?.name }}</h5>
+          <p class="card-text">{{ product?.description }}</p>
+          <p class="card-text">{{ product?.calories }} cal</p>
+          <p class="card-text">{{ product?.price | currency }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!isLoading && !product">
+  <p class="no-product">Product details not found.</p>
+</div>

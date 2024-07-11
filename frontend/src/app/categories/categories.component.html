@@ -1,0 +1,15 @@
+<img src="https://cura4u.com/Common/DisplayFileFormFileName?fileName=Exploring_Different_Types_of_Diets_A_Comprehensive_Guide_to_Common_Dietary_Approaches_BlogImage_4586ed57-a5d8-408e-a787-9120ac6c66a2.jpeg" class="image" alt="">
+<hr>
+<div class="title">
+  <strong>Type Of Diets</strong>
+</div>
+<div class="categories">
+  <div *ngFor="let category of categories" class="category-card">
+    <a [routerLink]="['/products', category.id]">
+      <img [src]="'http://localhost/final_project/backend/storage/app/public/' + category.image" alt="{{ category.name }}" class="category-image" />
+    </a>
+    <div class="category-info">
+      <h2 class="category-name">{{ category.name }}</h2>
+    </div>
+  </div>
+</div>

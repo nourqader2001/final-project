@@ -1,0 +1,21 @@
+<!-- <h1>Types of Exercises</h1> -->
+<img src="assets/l0908b16207233934035.jpg" class="image">
+<hr>
+
+<div class="card mb-3" *ngFor="let exercise of exercises">
+    <div class="card-video">
+        <iframe allowfullscreen="allowfullscreen" class="number4vid" [src]="exercise.videoSrc" poster="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/b242.png">
+        </iframe>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ exercise.title }}</h5>
+        <ul class="card-body-text"> <!-- Changed to <ul> -->
+            <li *ngFor="let paragraph of exercise.body.split('\n')">{{ paragraph }}</li> <!-- Splitting body into list items -->
+        </ul>
+        <div class="card-text">
+            <ul>
+                <li *ngFor="let tip of exercise.tips">{{ tip }}</li>
+            </ul>
+        </div>
+    </div>
+</div>

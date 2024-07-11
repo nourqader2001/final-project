@@ -1,0 +1,147 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: lato;
+  background-color: #EEEEEE;
+}
+
+.textside {
+  margin-left: 25px;
+}
+
+.navlogo img {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 60%;
+  border-radius: 50%;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background: #FFFFFF;
+  height: 60px;
+  color: white;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 6px 10px;
+  margin: 5px 0px 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
+
+a {
+  color: #7D7D7D;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.inforide {
+  box-shadow: 1px 2px 8px 0px rgb(0, 100, 0);
+  background-color: white;
+  border-radius: 8px;
+  height: 200px;
+}
+
+.rideone img {
+  width: 90%;
+  height:199px;
+}
+
+.fontsty {
+  margin-right: -15px;
+}
+
+.fontsty h4 {
+  color: rgb(0, 100, 0);
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 56px);
+  padding-top: 4rem;
+  overflow-x: hidden;
+  background: transparent;
+}
+
+@media (min-width: 992px) {
+
+  #mainNav .navbar-brand {
+    width: 220px;
+  }
+
+  #mainNav .navbar-collapse .navbar-sidenav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
+  #mainNav .navbar-collapse .navbar-sidenav > .nav-item {
+    width: 230px;
+    padding: 5px 15px;
+    border-bottom: none;
+  }
+
+  #mainNav.fixed-top .navbar-sidenav {
+    height: calc(120vh - 150px);
+    width: 230px;
+  }
+
+  #mainNav.navbar-dark .navbar-collapse .navbar-sidenav {
+    background: rgb(0, 100, 0);
+  }
+
+  #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
+    color: white;
+  }
+
+  #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
+    color: rgb(0, 100, 0);
+    border-radius: 30px;
+    background-color: white;
+  }
+
+  .content-wrapper {
+    margin-left: 250px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-device-width: 640px) { 
+
+  .navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    /* border-color: #E84A5F;
+    background: #E84A5F; */
+    background: rgb(0, 100, 0) !important;
+  }
+}

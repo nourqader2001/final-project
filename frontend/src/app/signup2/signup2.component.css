@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    display: flex;
+    max-width: 1500px;
+    height: 600px; /* Added height property */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 175px;
+}
+
+.left {
+    flex: 1;
+    padding: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.left img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.left h1 {
+    margin: 10px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #218041;
+}
+.left p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    color: #3b3f58;
+}
+.right {
+    flex: 1;
+    padding: 40px;
+    background-color:white;
+}
+.form-container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3b3f58;
+}
+.form-container .btn-google,
+.form-container .btn-facebook,
+.form-container .btn-submit {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-container .divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    height: 1px;
+    width: 40%;
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+}
+.divider::before {
+    left: 0;
+}
+.divider::after {
+    right: 0;
+}
+.divider span {
+    background:#f3f4f6;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+    color: #218041;
+}
+.form-container input ,select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-container .btn-submit {
+    background: #218041; /* Purple color for submit button */
+    color: white;
+}
+.form-container p {
+    text-align: center;
+}
+.form-container a {
+    color: #218041; /* Purple color for links */
+}

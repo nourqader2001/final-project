@@ -1,0 +1,65 @@
+.loading-container {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #4caf50; /* Green background */
+  }
+  
+  .product-card {
+    max-width: 800px; /* Increased width */
+    border: 1px solid #4caf50; /* Green border */
+    background-color: #ffffff; /* White background */
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Added padding */
+  }
+  
+  .product-image-container {
+    position: relative;
+    height: 100%; /* Make the image container the same height as the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .product-image {
+    height: 100%; /* Ensure the image takes up the full height of the container */
+    width: 100%; /* Ensure the image takes up the full width of the container */
+    object-fit: cover; /* Ensure the image covers the area */
+  }
+  
+  .add-to-cart-button {
+    background-color: #4caf50; /* Green button background */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Increased font size */
+    margin: 10px; /* Margin for spacing */
+    align-self: center; /* Center the button horizontally */
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+  }
+  
+  .product-card .card-title {
+    color: #4caf50; /* Green text */
+    font-size: 24px; /* Increased font size */
+  }
+  
+  .product-card .card-text {
+    color: #333333;
+    font-size: 18px; /* Increased font size */
+  }
+  
+  .no-product {
+    text-align: center;
+    color: #ff0000; /* Red text for error */
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  

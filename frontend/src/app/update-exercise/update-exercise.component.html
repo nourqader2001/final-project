@@ -1,0 +1,37 @@
+<div class="form-container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div style="width: 80%; margin: auto; margin-top: 25px;">
+      <label style="color: green;" class="myValid-2">{{ message }}</label>
+      <label style="color: red;" class="myValid-2">{{ message2 }}</label>
+
+      <div class="form-group">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" formControlName="title">
+      </div>
+      <div *ngIf="myValid['title'].touched && myValid['title'].invalid" class="error">
+        <div *ngIf="myValid['title'].errors?.['required']">Title is required</div>
+        <div *ngIf="myValid['title'].errors?.['maxlength']">Title cannot exceed 255 characters</div>
+      </div>
+
+      <div class="form-group">
+        <label for="body" class="form-label">Body</label>
+        <textarea id="body" class="form-control" formControlName="body"></textarea>
+      </div>
+      <div *ngIf="myValid['body'].touched && myValid['body'].invalid" class="error">
+        <div *ngIf="myValid['body'].errors?.['required']">Body is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="video" class="form-label">YouTube Video Link</label>
+        <input type="text" class="form-control" id="video" formControlName="video">
+      </div>
+      <div *ngIf="myValid['video'].touched && myValid['video'].invalid" class="error">
+        <div *ngIf="myValid['video'].errors?.['url']">Invalid URL</div>
+        <div *ngIf="myValid['video'].errors?.['pattern']">Invalid YouTube URL</div>
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="form.invalid">Update Exercise</button>
+      <button type="button" class="btn btn-clear" (click)="onClear()">Clear</button>
+    </div>
+  </form>
+</div>

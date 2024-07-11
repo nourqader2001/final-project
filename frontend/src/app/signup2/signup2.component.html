@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="left">
+    <img src="https://miro.medium.com/v2/resize:fit:1400/1*mX6b9GGrDD07FdjZ6QzkIA.png" alt="Healthy food">
+    <h1>We at Healthy Life</h1>
+    <p>are always fully focused on helping you achieve your wellness goals.</p>
+  </div>
+  <div class="right">
+    <div class="form-container">
+      <div class="divider"><span>Welcome to The World of Health</span></div>
+      <form (ngSubmit)="onSubmit()">
+        <input type="number" placeholder="Weight (kg)" [(ngModel)]="user.weight" name="weight" required>
+        <input type="number" placeholder="Height (cm)" [(ngModel)]="user.height" name="height" required>
+        <input type="number" placeholder="Age" [(ngModel)]="user.age" name="age" required>
+        <select [(ngModel)]="user.gender" name="gender" required>
+          <option value="" disabled selected>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <input type="text" placeholder="Target Goal" [(ngModel)]="user.weight_goal" name="goal" required>
+        <button class="btn-submit" type="submit">Next</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div style="width: 80%; margin: auto; margin-top: 25px;">
+        <label style="color: green;" class="myValid-2">{{message}}</label>
+        <label style="color: red;" class="myValid-2">{{message2}}</label>
+  
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" formControlName="title">
+        </div>
+        <div *ngIf="myValid['title'].touched && myValid['title'].invalid" style="color: red;">
+          <div *ngIf="myValid['title'].errors?.['required']">Title is required</div>
+          <div *ngIf="myValid['title'].errors?.['maxlength']">Title cannot exceed 255 characters</div>
+        </div>
+  
+        <div class="mb-3">
+          <label for="body" class="form-label">Body</label>
+          <textarea class="form-control" id="body" formControlName="body" rows="3"></textarea>
+        </div>
+        <div *ngIf="myValid['body'].touched && myValid['body'].invalid" style="color: red;">
+          <div *ngIf="myValid['body'].errors?.['required']">Body is required</div>
+        </div>
+  
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload Image</label>
+          <input type="file" class="form-control" id="image" (change)="onFileChange($event)">
+        </div>
+        <div *ngIf="myValid['image'].touched && myValid['image'].invalid" style="color: red;">
+          <div *ngIf="myValid['image'].errors?.['required']">Image is required</div>
+        </div>
+  
+        <button type="submit" class="btn btn-success" [disabled]="form.invalid">Add Advice</button>
+        <button type="button" class="btn btn-clear" (click)="onClear()">Clear</button>
+      </div>
+    </form>
+  </div>
+  

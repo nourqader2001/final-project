@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Categories</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{ category.id }}</td>
+        <td><img src="{{category.image}}" alt="{{ category.name }}" class="category-image"></td>
+        <td>{{ category.name }}</td>
+        <td>
+          <button (click)="updateCategory(category)" class="btn btn-primary btn-sm">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button (click)="deleteCategory(category.id)" class="btn btn-danger btn-sm">
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

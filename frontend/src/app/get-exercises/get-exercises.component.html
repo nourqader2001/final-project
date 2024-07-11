@@ -1,0 +1,30 @@
+<div class="table-container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+          <th>YouTube Video</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let exercise of exercises">
+          <td>{{ exercise.title }}</td>
+          <td>{{ exercise.body }}</td>
+          <td>
+            <a [href]="exercise.video" target="_blank">{{ exercise.video }}</a>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-primary" (click)="editExercise(exercise.id)">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+            <button class="btn btn-sm btn-danger" (click)="deleteExercise(exercise.id)">
+              <i class="fas fa-trash-alt"></i> Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

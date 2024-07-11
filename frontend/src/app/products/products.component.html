@@ -1,0 +1,18 @@
+<div *ngIf="isLoading">Loading...</div>
+<img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202312/MIT_Food-Diabetes-01_0.jpg?itok=Mp8FVJkC" class="image" alt="">
+<hr>
+<div class="title">
+  <strong>Our Products</strong>
+</div>
+<div class="products" *ngIf="!isLoading && products.length > 0">
+  <div *ngFor="let product of products" class="product-card">
+    <a [routerLink]="['/product-details', product.id]">
+      <img [src]="'http://localhost/final_project/backend/storage/app/public/' + product.image" alt="{{ product.name }}" class="product-image" />
+    </a>
+    <div class="product-info">
+      <h2 class="product-name">{{ product.name }}</h2>
+      <p class="product-description">{{ product.description }}</p>
+      <p class="product-price">{{ product.price | currency }}</p>
+    </div>
+  </div>
+</div>

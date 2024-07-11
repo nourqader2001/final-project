@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="alert alert-danger" *ngIf="message">{{ message }}</div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Body</th>
+                <th scope="col">Image</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let advice of advices">
+                <td>{{ advice.title }}</td>
+                <td>{{ advice.body }}</td>
+                <td>
+                    <img *ngIf="advice.image" [src]="'http://localhost/final_project/backend/storage/app/public/' + advice.image" class="product-image">
+                </td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-sm btn-primary" (click)="editAdvice(advice.id)">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger" (click)="deleteAdvice(advice.id)">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
